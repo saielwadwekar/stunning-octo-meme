@@ -1,2 +1,9 @@
-<h1>Tweets#edit</h1>
-<p>Find me in app/views/tweets/edit.html.erb</p>
+<%= form_with(model: @tweet )do |form| %>
+
+  <%= "USERNAME:"%><br>
+  <h4><%= @tweet.user_name%><h4><br>
+  <%= form.label :content, "Edit Tweet:" %><br>
+  <%= form.text_area :content, size: "50x5" %><br>
+
+  <%= form.submit "Submit" %><br>
+<% end %>

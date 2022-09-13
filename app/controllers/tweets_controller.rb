@@ -8,14 +8,18 @@ class TweetsController < ApplicationController
   end
 
   def destroy
+  	@tweet = Tweet.find(params[:id])
+    @tweet.destroy
+
+    redirect_to root_path
   end
 
   def delete
   end
 
   def create
-#debugger
   	@tweet = Tweet.new(tweet_params)
+  	# debugger
     if @tweet.save
       redirect_to @tweet
     else
@@ -28,9 +32,17 @@ class TweetsController < ApplicationController
   end
 
   def edit
+  	@tweet = Tweet.find(params[:id])
   end
 
   def update
+  	@tweet = Tweet.find(params[:id])
+
+    if @tweet.update(tweet_params)
+      redirect_to @tweet
+    else
+      render :edit, status: 422
+    end
   end
 
   private

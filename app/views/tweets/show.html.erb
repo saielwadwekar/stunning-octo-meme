@@ -1,10 +1,10 @@
+<%= "USERNAME:"%>
 <h1><%= @tweet.user_name %></h1>
-
-<p><%= @article.content %></p>
+<%= "TWEET:"%>
+<h4><%= @tweet.content %></h4>
 
 <ul>
-  <li><%= link_to "Edit", edit_tweets_path(@tweet) %></li>
-  <li><%= link_to "Destroy", tweets_path(@tweet) %></li>
+  <li><%= link_to "Edit", edit_tweet_path(@tweet) %></li>
+  <li><%= link_to "Delete", tweet_path(@tweet) %></li>
+  <li><%= link_to('Home', tweets_path) %></li>
 </ul>
-
-<%= link_to('Home', tweets_path) %>
