@@ -1,0 +1,16 @@
+<%= form_with model: @user do |form| %>
+
+  <%= form.label :first_name, "Enter Your First Name" %><br>
+  <%= form.text_field :first_name %><br>
+
+  <%= form.label :last_name, "Enter Your Last Name" %><br>
+  <%= form.text_field :last_name %><br>
+
+  <%= form.label :user_name, "Enter Your User Name" %><br>
+  <%= form.text_field :user_name %><br>
+
+  Password:<br>
+  <%= form.password_field :password %><br>
+
+  <%= form.submit "Submit" %><br>
+<% end %>

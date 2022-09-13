@@ -1,0 +1,16 @@
+Welcome to Twitter<br>
+
+If you are new here then 
+<%= link_to('Sign Up', "/user_details/new") %><br>
+<p>OR ELSE LOGIN BELOW:</p><br>
+
+<%= form_with model: @user do |form| %>
+  <%= form.label :user_name, "Enter Your User Name:" %><br>
+  <%= form.text_field :user_name %><br>
+
+  Enter Your Password:<br>
+  <%= form.password_field :password %><br>
+
+  <%= form.submit "Submit" %><br>
+<%end%>
+
