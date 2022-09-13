@@ -1,2 +1,10 @@
-<h1>Tweets#show</h1>
-<p>Find me in app/views/tweets/show.html.erb</p>
+<h1><%= @tweet.user_name %></h1>
+
+<p><%= @article.content %></p>
+
+<ul>
+  <li><%= link_to "Edit", edit_tweets_path(@tweet) %></li>
+  <li><%= link_to "Destroy", tweets_path(@tweet) %></li>
+</ul>
+
+<%= link_to('Home', tweets_path) %>

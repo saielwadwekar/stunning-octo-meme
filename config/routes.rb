@@ -1,16 +1,7 @@
 Rails.application.routes.draw do
-  get 'tweets/index'
-  get 'tweets/show'
-  get 'tweets/destroy'
-  get 'tweets/delete'
-  get 'tweets/create'
-  get 'tweets/new'
-  get 'tweets/edit'
-  get 'tweets/update'
-
-  root "user_details#index"
+  root "tweets#index"
   resources :user_details
-  resources :tweet
+  resources :tweets
 
 
   # get 'tweet/index'
