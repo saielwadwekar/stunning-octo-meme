@@ -1,4 +1,11 @@
+<h2>Welcome to Twitter</h2><br>
 <%= "We have" %>
 <%= @tweets.count %>
 <%= "Tweets as of now." %><br>
-<%= link_to('Write Your New Tweet Here', "tweets/new") %><br>
+
+<ul><% @tweets.each do |var| %><br>
+  <li><%= var.user_name %></li><br>
+  <%= var.content %><br>
+<% end %> </ul>
+
+<h3><%= link_to('Write Your New Tweet Here', "tweets/new") %></h3><br>

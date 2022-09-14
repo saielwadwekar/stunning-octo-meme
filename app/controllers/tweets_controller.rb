@@ -8,10 +8,10 @@ class TweetsController < ApplicationController
   end
 
   def destroy
-  	@tweet = Tweet.find(params[:id])
+		@tweet = Tweet.find(params[:id])
     @tweet.destroy
 
-    redirect_to root_path
+    redirect_to tweets_path, status: 303
   end
 
   def delete
