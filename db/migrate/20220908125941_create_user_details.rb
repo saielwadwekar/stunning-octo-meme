@@ -4,6 +4,7 @@ class CreateUserDetails < ActiveRecord::Migration[7.0]
       t.string :first_name
       t.string :last_name
       t.string :user_name
+      t.string :user_id
       t.string :password
 
       t.timestamps

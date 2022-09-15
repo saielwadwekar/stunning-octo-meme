@@ -12,16 +12,17 @@
 
 ActiveRecord::Schema[7.0].define(version: 2022_09_12_124401) do
   create_table "tweets", charset: "utf8mb4", collation: "utf8mb4_0900_ai_ci", force: :cascade do |t|
-    t.string "user_name", null: false
-    t.string "content", null: false
+    t.string "user_name"
+    t.string "content"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
 
   create_table "user_details", charset: "utf8mb4", collation: "utf8mb4_0900_ai_ci", force: :cascade do |t|
-    t.string "first_name", null: false
-    t.string "last_name", null: false
-    t.string "user_name", null: false
+    t.string "first_name"
+    t.string "last_name"
+    t.string "user_name"
+    t.string "user_id"
     t.string "password"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false

@@ -1,7 +1,10 @@
 Rails.application.routes.draw do
   root "user_details#index"
+  get "/user_details/log_in", to: "user_details#log_in"
+  post "/user_details/log_in", to: "user_details#sign_in"
   resources :user_details
   resources :tweets
+
 
 
   # get 'tweet/index'

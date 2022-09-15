@@ -10,6 +10,7 @@ class UserDetailsController < ApplicationController
   end
 
   def index
+ 
   end
 
   def log_in
@@ -19,7 +20,12 @@ class UserDetailsController < ApplicationController
     @user = UserDetail.new
   end
 
-  def sign_up
+  def sign_in
+    if UserDetail.find_by(user_name: params[:user_name]) && UserDetail.find_by(password: params[:password])
+      redirect_to tweets_path
+    else
+      redirect_to root_path
+    end
   end
 
   def show
